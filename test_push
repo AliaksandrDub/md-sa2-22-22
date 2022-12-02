@@ -1,0 +1,12 @@
+#!/bin/bash
+
+echo "Adding git commit"
+git add .
+if git status | grep -q "Changes to be committed"
+then
+  git commit -m "$Test_commit"
+  echo "Pushing git commit"
+fi 
+  for push in $(git remote); do
+        git push -u $push HEAD:$OUTPUT_BRANCH
+done
