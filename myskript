@@ -1,0 +1,13 @@
+#!/bin/bash
+
+echo "Enter your message"
+read message
+
+git add .
+git commit -m"${message}"
+
+ git status
+ echo "Pushing"
+ for push in $(git remote); do
+        git push -u $push
+done
