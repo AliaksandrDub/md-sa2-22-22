@@ -1,9 +1,7 @@
-me: Check tabs
+me: Check tabs new
 
 on:
   pull_request:
-    branches:
-      - master
 
 jobs:
   build:
